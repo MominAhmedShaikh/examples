@@ -56,7 +56,7 @@ class ImageClassificationHelper {
 
     // Configures the initialization options.
     let options = ImageClassifierOptions(modelPath: modelPath)
-    options.baseOptions.computeSettings.cpuSettings.numThreads = Int32(threadCount)
+    options.baseOptions.computeSettings.cpuSettings.numThreads = Int(Int32(threadCount))
     options.classificationOptions.maxResults = resultCount
     options.classificationOptions.scoreThreshold = scoreThreshold
 
